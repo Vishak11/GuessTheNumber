@@ -1,24 +1,83 @@
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap') ;
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: inherit;
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
 }
 
-html{
-    font-size: 62.5%;
-    box-sizing: border-box;
-
+.Main {
+    text-align: center;
 }
 
-body{
-    font-family:'Press Start 2p',sans-serif ;
-    color:#eee;
-    background-color:#222
-
+.Header {
+    color: #2c3e50;
 }
-header{
-    position: relative;
-    height: 35vh;
-    border-bottom: 7px solid #eee
+
+.between {
+    color: #7f8c8d;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.number {
+    font-size: 30px;
+    margin-top: 20px;
+    color: #e67e22;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.left {
+    text-align: center;
+}
+
+.guess {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.check {
+    margin-top: 10px;
+}
+
+.right {
+    margin-left: 30px;
+}
+
+.message {
+    color: #2ecc71;
+    font-size: 20px;
+}
+
+.label-score {
+    margin-top: 20px;
+}
+
+.label-highscore {
+    margin-top: 10px;
+    color: #f39c12;
 }
