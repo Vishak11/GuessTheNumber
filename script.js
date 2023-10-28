@@ -10,8 +10,11 @@ document.querySelector('.check').addEventListener('click',
 
     function () {
         const guess = Number(document.querySelector('.guess').value)
-        console.log("guess", guess)
-        if (!guess) {
+        if(guess>20||guess<1){
+            document.querySelector('.message').textContent = "Please enter a value between 1 and 20"
+        }
+      
+        else if (!guess) {
             document.querySelector('.message').textContent = "Empty value"
         }
         else if (guess == Snumber) {
