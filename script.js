@@ -1,9 +1,10 @@
 'use strict'
-let Snumber = Math.trunc(Math.random() * 20) + 1
+let Snumber,Score,OldScore
+Snumber = Math.trunc(Math.random() * 20) + 1
 console.log(Snumber)
 document.querySelector('.number').textContent = "Guess me"
-let Score = 20
-let OldScore = localStorage.getItem("HighScore")
+Score = 20
+OldScore = localStorage.getItem("HighScore")
 document.querySelector('.HighScore').textContent = OldScore
 document.querySelector('.check').addEventListener('click',
 
@@ -25,7 +26,7 @@ document.querySelector('.check').addEventListener('click',
             document.querySelector('.guess').disabled = true;
         }
         else if (guess != Snumber) {
-            document.querySelector('.message').textContent = guess>Snumber?"Too High":"Too Low"
+            document.querySelector('.message').textContent = guess > Snumber ? "Too High" : "Too Low"
             Score--
             if (Score == 0) {
                 document.querySelector('.message').textContent = "Game Over"
@@ -34,11 +35,7 @@ document.querySelector('.check').addEventListener('click',
             else {
                 document.querySelector('.score').textContent = Score
             }
-
         }
-        
-
-        
         document.querySelector('.guess').value = ''
     })
 document.querySelector('.again').addEventListener('click',
