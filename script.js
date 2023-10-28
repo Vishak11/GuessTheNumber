@@ -60,7 +60,7 @@ document.querySelector('.again').addEventListener('click',
         document.querySelector('body').style.backgroundColor = 'white'
         document.querySelector('.number').textContent = "Guess me"
         Snumber = Math.trunc(Math.random() * 20) + 1
-        Score=20
+        Score = 20
         document.querySelector('.guess').disabled = false;
         OldScore = localStorage.getItem('HighScore', Score)
         console.log(Snumber)
