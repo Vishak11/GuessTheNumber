@@ -22,6 +22,7 @@ document.querySelector('.check').addEventListener('click',
             }
             document.querySelector('.HighScore').textContent = Score
             document.querySelector('.number').textContent = "Correct Guess"
+            document.querySelector('.guess').disabled = true;
         }
         else if (guess > Snumber) {
             document.querySelector('.message').textContent = "Too High"
@@ -59,6 +60,8 @@ document.querySelector('.again').addEventListener('click',
         document.querySelector('body').style.backgroundColor = 'white'
         document.querySelector('.number').textContent = "Guess me"
         Snumber = Math.trunc(Math.random() * 20) + 1
+        Score=20
+        document.querySelector('.guess').disabled = false;
         OldScore = localStorage.getItem('HighScore', Score)
         console.log(Snumber)
 
