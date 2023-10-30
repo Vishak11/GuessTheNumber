@@ -23,8 +23,9 @@ document.querySelector('.check').addEventListener('click',
             document.querySelector('body').style.backgroundColor = '60b347'
             if (Score > OldScore) {
                 localStorage.setItem("HighScore", Score)
+                document.querySelector('.HighScore').textContent = Score
             }
-            document.querySelector('.HighScore').textContent = Score
+            
             document.querySelector('.number').textContent = "Correct Guess"
             document.querySelector('.guess').disabled = true;
         }
